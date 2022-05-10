@@ -18,4 +18,18 @@ public class BusTest {
     public void busStartsEmpty(){
         assertEquals(0, bus.passengersCount());
     }
+
+    @Test
+    public void canAddPassenger(){
+        bus.addPassengerToBus(person);
+        assertEquals(1, bus.passengersCount());
+    }
+    @Test
+    public void canRemovePassenger(){
+        bus.addPassengerToBus(person);
+        bus.removePassenger();
+        assertEquals(0, bus.passengersCount());
+    }
+
+
 }
